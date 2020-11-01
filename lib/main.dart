@@ -2,7 +2,7 @@
 Project for WPFL MAD @FHGR, HS2020
 Creators/Authors: Samir Limani, Karin Schori & Florim Rrahmani
 Editor used: Visual Studio Code Version: 1.50.1
-Tested with: Mozilla (tbd), Google Chrome Version 86.0.4240.111 (Official Build) (64-bit)
+Tested with: Android Emulator - Pixel 2 API 28 
 API used: openweathermap.org
 */
 import 'package:flutter/material.dart';
