@@ -1,3 +1,10 @@
+/*
+Project for WPFL MAD @FHGR, HS2020
+Creators/Authors: Samir Limani, Karin Schori & Florim Rrahmani
+Editor used: Visual Studio Code Version: 1.50.1
+Tested with: Mozilla (tbd), Google Chrome Version 86.0.4240.111 (Official Build) (64-bit)
+API used: openweathermap.org
+*/
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:http/http.dart' as http;
@@ -35,6 +42,7 @@ class _HomeState extends State<Home> {
     });
   }
 
+//Basically runs anything inside this method first
   @override
   void initState() {
     super.initState();
@@ -65,6 +73,8 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 Text(
+                  //If temp is not equal to null, temp then converted to string
+                  //Otherwise if temp is equal to null, respectively no data is incoming, only the string "Loading" shows in the app
                   temp != null ? temp.toString() + "\u00B0" : "Loading",
                   style: TextStyle(
                       color: Colors.white,
@@ -104,7 +114,7 @@ class _HomeState extends State<Home> {
                   ),
                   ListTile(
                     leading: FaIcon(FontAwesomeIcons.sun),
-                    title: Text("TemparaHumidityture"),
+                    title: Text("Humidityture"),
                     trailing: Text(
                         humidity != null ? humidity.toString() : "Loading"),
                   ),
