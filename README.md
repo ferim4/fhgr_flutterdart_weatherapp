@@ -1,16 +1,12 @@
-# weather_app
+# "Weather App"
 
-A new Flutter project.
+Our first try to create a mobile app for android based on flutter&dartproject.
 
-## Getting Started
+## What's the app about?
 
-This project is a starting point for a Flutter application.
+It shows the temperature of your current location and also it shows clothes suggestion for the its temperature. Also you can search other location and its weather data. 
 
-A few resources to get you started if this is your first Flutter project:
+## How does it work
+This part is under construction and will be updated soon.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
