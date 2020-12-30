@@ -18,6 +18,11 @@ class Location {
   double longitude;
 
   Future<void> getCurrentLocation() async {
+    //to get used with asynchronous programming, we had to resarch a little deeper than the things we had at the lessons
+    //this sources helped us to get used with future, async and await
+    //https://dart.dev/codelabs/async-await
+    //https://entwickler.de/online/development/async-await-flutter-579937742.html
+    //https://medium.com/flutter-community/a-guide-to-using-futures-in-flutter-for-beginners-ebeddfbfb967
     try {
       Position position = await Geolocator()
           .getCurrentPosition(desiredAccuracy: LocationAccuracy.best);

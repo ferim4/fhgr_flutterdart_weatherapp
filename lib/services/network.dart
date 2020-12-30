@@ -23,6 +23,11 @@ class NetworkHelper {
   final url;
 
   Future<dynamic> getData() async {
+    //to get used with asynchronous programming, we had to resarch a little deeper than the things we had at the lessons
+    //this sources helped us to get used with future, async and await
+    //https://dart.dev/codelabs/async-await
+    //https://entwickler.de/online/development/async-await-flutter-579937742.html
+    //https://medium.com/flutter-community/a-guide-to-using-futures-in-flutter-for-beginners-ebeddfbfb967
     http.Response response = await http.get(url);
 
     if (response.statusCode == 200) {
