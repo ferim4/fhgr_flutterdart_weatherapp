@@ -11,7 +11,7 @@ API used: openweathermap.org
 //************************************************
 import "package:weather_app/screens/location_screen.dart";
 import "package:weather_app/services/location.dart";
-import "package:weather_app/services/networking.dart";
+import "package:weather_app/services/network.dart";
 import "package:weather_app/services/weather.dart";
 import "package:flutter/material.dart";
 import "package:flutter_spinkit/flutter_spinkit.dart";

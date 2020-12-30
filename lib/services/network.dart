@@ -10,8 +10,13 @@ API used: openweathermap.org
 // Import section for needed modules
 //************************************************
 import "package:http/http.dart" as http;
+//is needed for encoding data like json
+//Source: https://api.dart.dev/stable/2.10.4/dart-convert/dart-convert-library.html
 import "dart:convert";
 
+//Used the one, which we created at school, but also needed other sources:
+//https://medium.com/flutter-community/handling-network-calls-like-a-pro-in-flutter-31bd30c86be1
+//https://flutter.dev/docs/cookbook/networking/fetch-data
 class NetworkHelper {
   NetworkHelper(this.url);
 
