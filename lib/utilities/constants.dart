@@ -13,7 +13,7 @@ import "package:flutter/material.dart";
 
 //Got this Idea to seperate some constants in a seperate file from followed blog: https://medium.com/@aschilken/flutter-best-practices-colors-and-textstyles-6e14b06fc3a1
 //and also from https://www.driftycode.com/flutter-global-constants-for-the-complete-project/
-//last but not least (honestly didn't understand the guy, cause he talked in hindi, but i could reade the code he wrote):
+//last but not least (honestly didn't understand the guy, cause he talked in hindi, but could read the code he wrote):
 //https://www.youtube.com/watch?v=MaFUT1zpifE
 const constant_TextFieldInputDecoration = InputDecoration(
   filled: true,
@@ -35,19 +35,19 @@ const constant_TextFieldInputDecoration = InputDecoration(
   ),
 );
 
-//Used for temperature number in location_scree.dart file
+//Used for temperature number in location_screen.dart file
 const constant_TemperatureTextStyle = TextStyle(
   fontFamily: "Searocks",
   fontSize: 150.0,
 );
 
-//Used for message/clothes suggestion in location_scree.dart file
+//Used for message/clothes suggestion in location_screen.dart file
 const constant_MessageTextStyle = TextStyle(
   fontFamily: "Searocks",
   fontSize: 60.0,
 );
 
-//Used for condition icon in location_scree.dart file
+//Used for condition icon in location_screen.dart file
 const constant_ConditionTextStyle = TextStyle(
   fontSize: 110.0,
 );
