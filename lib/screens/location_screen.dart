@@ -24,6 +24,7 @@ class LocationScreen extends StatefulWidget {
 }
 
 class _LocationScreenState extends State<LocationScreen> {
+  //section for declaration of the variables
   WeatherModel weather = WeatherModel();
   int temperature;
   String weatherbackground;
@@ -34,11 +35,14 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   void initState() {
     super.initState();
+    //this function is needed to refresh the displayed data on the screen
     updateScreen(widget.locationWeather);
   }
 
+//this section is needed to get the weather information from API openweathermap.org
   void updateScreen(dynamic weatherData) {
     setState(() {
+      //if there is no data(null) it shows this messages like for the weather Icon "Error"
       if (weatherData == null) {
         temperature = 0;
         weatherIcon = "Error";
@@ -47,13 +51,16 @@ class _LocationScreenState extends State<LocationScreen> {
         cityName = "";
         return;
       }
+      //here hopefully data is available and shows the temperature etc.
       var temp = weatherData['main']['temp'];
       temperature = temp.toInt();
       cityName = weatherData['name'];
       weatherbackground =
           weatherData['weather'][0]['main'].replaceAll(' ', '').toLowerCase();
       int condition = weatherData['weather'][0]['id'];
+      //this icon is coming from the weather.dart file
       weatherIcon = weather.getWeatherIcon(condition);
+      //this message also comes from the weather.dart file
       weatherMessage = weather.getMessage(temperature);
     });
   }
@@ -71,7 +78,9 @@ class _LocationScreenState extends State<LocationScreen> {
                 AssetImage("images/weatherbackground/$weatherbackground.png"),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
-                Colors.white.withOpacity(0.8), BlendMode.dstATop),
+                //got the blendmode to fade images from source: https://api.flutter.dev/flutter/dart-ui/BlendMode-class.html
+                Colors.white.withOpacity(0.8),
+                BlendMode.dstATop),
           ),
         ),
         constraints: BoxConstraints.expand(),

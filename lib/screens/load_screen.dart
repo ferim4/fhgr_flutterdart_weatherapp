@@ -21,6 +21,8 @@ class LoadScreen extends StatefulWidget {
   _LoadScreenState createState() => _LoadScreenState();
 }
 
+//Used the internet for help: https://www.digitalocean.com/community/tutorials/flutter-geolocator-plugin
+//and the official flutter pub.dev site https://pub.dev/packages/geolocator/versions/5.3.2+2
 class _LoadScreenState extends State<LoadScreen> {
   double latitude;
   double longitude;
@@ -34,6 +36,7 @@ class _LoadScreenState extends State<LoadScreen> {
 
 //Source: getlocation
   void getLocation() async {
+    //gest the current location weather data from the weather.dart file while loading the app/loading screen
     var weatherData = await WeatherModel().getLocationWeather();
     Navigator.push(
       context,
