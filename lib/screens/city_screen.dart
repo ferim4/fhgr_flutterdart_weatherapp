@@ -20,6 +20,7 @@ class CityScreen extends StatefulWidget {
 class _CityScreenState extends State<CityScreen> {
   String cityName;
 
+//basically more or less just scaffold stuff needed in this dart file
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,6 +32,7 @@ class _CityScreenState extends State<CityScreen> {
           ),
         ),
         constraints: BoxConstraints.expand(),
+        //Source SafeArea: https://api.flutter.dev/flutter/widgets/SafeArea-class.html
         child: SafeArea(
           child: Column(
             children: <Widget>[
@@ -38,9 +40,12 @@ class _CityScreenState extends State<CityScreen> {
                 alignment: Alignment.topLeft,
                 child: FlatButton(
                   onPressed: () {
+                    //is needed to navigate back and therefore we used this source:
+                    //https://flutter.dev/docs/cookbook/navigation/navigation-basics
                     Navigator.pop(context);
                   },
                   child: Icon(
+                    //definition of the icon which here is an arrow like this "<-"
                     Icons.arrow_back,
                     size: 50.0,
                   ),
@@ -53,7 +58,9 @@ class _CityScreenState extends State<CityScreen> {
                     color: Colors.black,
                     fontSize: 18,
                   ),
+                  //to see what style is used, go to file constants.dart
                   decoration: constant_TextFieldInputDecoration,
+                  //here the cityname value is transported
                   onChanged: (value) {
                     cityName = value;
                   },
